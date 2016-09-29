@@ -1,4 +1,4 @@
-section#contact-info {
+section#contact-info {   /*parent: section, contact-info id child element;*/
   position: fixed;
   top: 0px;
   right: 0px;
@@ -6,14 +6,14 @@ section#contact-info {
   width: 100%;
   background-color: white;
   border-bottom: 1px solid black;
-  padding: 20px;
+  padding: 20px; /*space between border and inside*/
 }
 
-h1#resume-title {
+h1#resume-title { /*parent: h1, resume-title id child element;*/
   margin-top: 70px;
 }
 
-section#contact-info p {
+section#contact-info p { /*parent:section, id contact-info, child p of that;*/
   display: inline;
   padding-right: 20px;
   padding-left: 20px;
@@ -24,6 +24,6 @@ section#contact-info p {
 to avoid the appearance of an extra
 border. */
 
-section#contact-info p:last-of-type {
+section#contact-info p:last-of-type { /*parent: section, id contact-info child, child last p*/;
   border-right: none;
 }
