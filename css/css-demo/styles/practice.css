@@ -1,0 +1,24 @@
+section#contact-info{
+  font-size: 0.8em;
+}
+
+section.job{
+  background-color: #e9e5dc;
+  border-radius: 25px;
+  padding: 5px 10px 5px 10px; /*top right bottom left*/
+  margin-bottom: 5px;
+}
+
+ul.accomplishments{
+  font-size: 0.8em;
+}
+
+/*pseudo-class-selector example */
+/*for pseudo-class-selectors, precede with :*/
+p#email:hover{
+ color: blue;
+}
+
+ul li{ /*for child element of parent element, space inbetween, no # or . needed*/
+  color:gray;
+}

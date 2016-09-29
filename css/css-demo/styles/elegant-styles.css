@@ -24,9 +24,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica", sans-serif;
 }
 
-/* 
+/*
 
-You can select a class (preceded by a period) 
+You can select a class (preceded by a period)
 or ID (preceded by a hash).
 
 In HTML, a class is assigned like this:
@@ -48,11 +48,11 @@ A given class can be used multiple times in a document.
 /* You can use a tag AND a class
 to make the rule more specific. */
 
-h2.experience-category {
+h2.experience-category { /*class*/
   font-size: 1.8em;
 }
 
-h1#resume-title {
+h1#resume-title { /*ID*/
   font-size: 2.8em;
   margin-top: 0;
 }
@@ -61,6 +61,6 @@ h1#resume-title {
 an element of a certain class (the p
 is nested inside the contact-info section) */
 
-#contact-info p {
+#contact-info p {  /*outer element child-tag*/
   line-height: .8;
 }
