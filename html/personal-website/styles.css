@@ -1,0 +1,42 @@
+  body {
+    background-color: #f9f9f9;
+  }
+
+
+  h1{
+    margin:10px;
+  }
+
+  p{
+    color: black;
+    font-family: Helvetica;
+  }
+
+  img#raffia{
+    border: black dashed 1px;
+    padding: 1px;
+  }
+
+  .question{
+    font-family: Verdana;
+  }
+
+  footer{
+    margin: auto;
+    text-align: center;
+    font-style:italic;
+    background-image:url(flag-footer.jpg);
+    width: 100%;
+    background-size: 100% 100%;
+    height: 50px;
+  }
+
+  a:visited {
+    color: DarkGray;
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        background-color: lightblue;
+    }
+}
