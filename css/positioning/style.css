@@ -1,0 +1,48 @@
+/*Attempts:
+-Method 1 (with absolute)
+--Octopus not always centered on page with set px margins
+
+-Method 2 (with fixed)
+--Doesn't work if page resized vertically
+--Based on position fixed on page*/
+
+img#octopus{
+/*  Method 1: With absolute
+  margin:100px;
+  position:fixed;
+  z-index: 1;*/
+
+/*  Method 2: with fixed*/
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /*to account for size of image, see more here: https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/;*/
+}
+
+img#hat{
+/*  Method 1: With absolute
+  position: absolute;
+  left:80px;
+  top: 45px;
+  z-index: 2;*/
+
+  /*  Method 2: With fixed*/
+  position: fixed;
+  top: 32%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+}
+
+img#glasses{
+/*  Method 1: With absolute
+  position: absolute;
+  left:150px;
+  top: 210px;
+  z-index: 3;*/
+
+/*  Method 2: With fixed*/
+  position: fixed;
+  top: 48%;
+  left: 50.5%;
+  transform: translate(-50%, -50%);
+}
