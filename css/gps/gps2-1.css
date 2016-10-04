@@ -1,0 +1,39 @@
+body {
+  font-family: helvetica, sans-serif;
+}
+
+header {
+  margin-left: 5%;
+  width: 90%;
+}
+
+header p {
+  color: gray;
+}
+
+footer {
+  margin-left: 5%;
+  margin-top: 5%;
+  border-top: 1px solid black;
+  padding-top: 5px;
+  font-style: italic;
+  font-size: 50%;
+}
+
+article:nth-child(even) {
+  background: #CCC
+  }
+
+.column-1 {
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  margin-left: 5%;
+}
+
+.column-2 {
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  margin-left: 10%;
+}
