@@ -1,3 +1,5 @@
+RELEASE 0 : Robot using elevator algorithm
+
 -Receive input on which number floor to go to, store as string.
 
 -Enter elevator
@@ -9,3 +11,12 @@
 -If you have finished parsing the last floor number button, and it is greater than your inputted
 floor number, ask the user to repeat their input
 
+RELEASE 1 : Opening door using a key from a keychain
+
+-Go to door location
+--Face door
+
+-For each key in keychain
+--Try opening the door to the right with that key
+--Try opening the door to the left with that key
+---Stop once the door is open
