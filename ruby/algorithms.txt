@@ -1,0 +1,11 @@
+-Receive input on which number floor to go to, store as string.
+
+-Enter elevator
+-Face floor numbers
+-For each floor number, check if it is equal to inputted number floor
+--If it is equal, press that button
+--Else, do nothing
+
+-If you have finished parsing the last floor number button, and it is greater than your inputted
+floor number, ask the user to repeat their input
+
