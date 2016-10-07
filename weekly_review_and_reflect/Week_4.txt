@@ -1,0 +1,56 @@
+Variables
+---------
+
+1. What is a variable? Why might a programmer use a variable?
+A variable stores a value such as a string, number, array, or hash.  Might use a variable to store information that needs to be accessed or manipulated later.
+
+2. If the value of first_name is "Abraham" and last_name is "Lincoln", explain the order in which Ruby will run the line full_name = first_name + last_name, and what the final result will be.
+last_name is concatenated to first_name, and then the variable full_name is assigned the value "AbrahamLincoln"
+
+Data Types
+----------
+
+ - For each of the following data types, write a short definition and give at least one example of when you might use the data type in a program. (Don't use an example we've already provided.)
+ - string: a set of characters, to store names
+ -  integer: a whole number, for calculations
+ - float: a decimal, for calculations
+ - nil: "empty" value, if no value exists
+ - boolean: true or false, to check if a condition is satisfied (i.e. extra fries or not)
+
+Algorithms
+==========
+
+4. What is an algorithm? Set of instructions/steps
+
+5. What are two common categories of algorithm in computer science?
+searching and sorting
+bottom-up and up-down
+
+Methods
+-------
+
+ - What is a method? Why might a programmer choose to use a method?  A method or function is a set of instructions to carry out.  A programmer might use a method to do an action.
+
+ - Define the following terms as they relate to a method.
+
+ - return value: the value a method returns
+ - side effect: side effect to the global or local scope that is not the result of the return value
+ -  parameter: value method expects you to pass in, in a method definition
+ - argument: the value passed in to a method
+ -  implicit: opposite of explicity, hidden/unstated
+ -  return: each method returns an explicitly defined return value or the last line of the method
+ - What are global scope and method scope? How do those scopes impact the availability of data at different points in a program? Global scope is accessible to all methods and objects within your environment/file. Method scope is only within a method.  Data within a method is not accessible to other methods unless it is passed to it.
+
+Control Flow
+------------
+
+ - What is control flow? Why might a programmer choose to use flow control?  For example if/elsif/else, when you have a set of conditional arguments or conditions to fulfill.
+
+ - Define the following terms as they relate to flow control.
+
+ - loop: for example, for each, iterates over every value in a set of values.
+ - if: check if something is true
+ - else: if the if condition is not fulfilled, it will go into the else case
+ -  elsif: if condition is not fulfilled, this also has its own if to fulfill
+ -  while: while a condition is fulfilled
+ -  until: until a condition is fulfilled
