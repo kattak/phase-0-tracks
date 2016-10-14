@@ -1,3 +1,4 @@
+#search array
 def search_array(ary, int)
   i = 0
   until i == ary.length
