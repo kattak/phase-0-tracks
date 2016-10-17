@@ -39,7 +39,7 @@
 # => "ilT"
 
  "Elementary,    my   dear        Watson!".squeeze
-# "Elementary,    my   dear        Watson!".split.join(' ')
+# Alternate: "Elementary,    my   dear        Watson!".split.join(' ')
 # => "Elementary, my dear Watson!"
 
 # Extra check:
