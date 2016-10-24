@@ -4,7 +4,7 @@
 # multiply two integers and return an integer
 
 # RSpec
-# 'describe' block for each group of tests  
+# 'describe' block for each group of tests
   # 'it' block for each individual test
     # expect(<YOUR CODE>).to eq <RESULT>
 
@@ -24,4 +24,9 @@ describe Calculator do
   it "multiplies two integers" do
     expect(calculator.multiply(2,3)).to eq 6
   end
+
+  it "divides two integers" do
+    expect(calculator.divide(15,3)).to eq 5
+  end
+
 end
