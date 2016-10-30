@@ -16,7 +16,7 @@ function reverse(input){
 //Driver code
 
 //Reverse "Hello World"
-result = reverse("Hello World")
+var result = reverse("Hello World")
 
 //Console.log if some condition is true
 if (1 == 1){
