@@ -1,7 +1,7 @@
 require_relative 'hangman'
 
 describe Hangman do
-  let(:game) { Hangman.new(["ari", "bando", "secret"]) }
+  let(:game) { Hangman.new("ari", "bando", "secret") }
 
   it "stores the secret word given on initialization" do
     expect(game.secret_word).to eq "secret"

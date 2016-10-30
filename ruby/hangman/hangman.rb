@@ -17,7 +17,7 @@
   #prints these statements when guess_counter == 0
 
 class Hangman
-  attr_reader :player1, :player2, :secret_word, :guesses
+  attr_reader :player1, :player2, :secret_word, :guesses, :current_state
 
   def initialize(player1, player2, word)
     @player1 = player1
@@ -62,35 +62,37 @@ class Hangman
   end
 end
 
-#Driver Code
-puts "Hello and welcome to Hangman"
-puts "This game is for two players."
-puts "Player 1, what is your name?"
-player1 = gets.chomp
-puts "Player2, what is your name?"
-player2 = gets.chomp
-puts "Ok, #{player1} will choose a word for #{player2} to guess"
-puts "#{player1}, what word do you choose?"
-secret_word = gets.chomp
-guesses = secret_word.length
-puts "#{player2} will have #{secret_word.length} guesses!"
 
-#make new hangman instance
-game = Hangman.new(player1, player2, secret_word)
+# UNCOMMENT THIS CODE TO PLAY GAME WITH UI
+# #Driver Code
+# puts "Hello and welcome to Hangman"
+# puts "This game is for two players."
+# puts "Player 1, what is your name?"
+# player1 = gets.chomp
+# puts "Player2, what is your name?"
+# player2 = gets.chomp
+# puts "Ok, #{player1} will choose a word for #{player2} to guess"
+# puts "#{player1}, what word do you choose?"
+# secret_word = gets.chomp
+# guesses = secret_word.length
+# puts "#{player2} will have #{secret_word.length} guesses!"
 
-while !game.over?
-  puts ""
-  puts "#{player2}, you have made #{game.guesses} out of #{game.secret_word.length} guesses"
-  puts "#{player2}, guess a letter"
-  letter = gets.chomp
-  result = game.check_guess(letter)
-  puts "Currently: #{result}"
-end
+# #make new hangman instance
+# game = Hangman.new(player1, player2, secret_word)
 
-if game.won?
-  puts "Congratulations!"
-  puts "#{game.player1} won in #{guesses} guesses!"
-else
-  puts "Haha"
-  puts "#{game.player1} lost, even with #{guesses} guesses!"
-end
+# while !game.over?
+#   puts ""
+#   puts "#{player2}, you have made #{game.guesses} out of #{game.secret_word.length} guesses"
+#   puts "#{player2}, guess a letter"
+#   letter = gets.chomp
+#   result = game.check_guess(letter)
+#   puts "Currently: #{result}"
+# end
+
+# if game.won?
+#   puts "Congratulations!"
+#   puts "#{game.player1} won in #{guesses} guesses!"
+# else
+#   puts "Haha"
+#   puts "#{game.player1} lost, even with #{guesses} guesses!"
+# end
