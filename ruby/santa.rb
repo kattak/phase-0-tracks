@@ -1,6 +1,6 @@
 class Santa
   attr_reader :ethnicity, :reindeer_ranking #attr_reader gives read access
-  attr_accessor :gender, :age                            #attr_accessor gives rw access
+  attr_accessor :gender, :age               #attr_accessor gives rw access
 
   def speak
     puts "Ho, ho, ho! Haaaappy holidays!"
@@ -78,7 +78,7 @@ end
 #Initialize an example_santa instance
 kat = example_santa #should be rewritten as a method inside Santa class??
 
-#Check its in $SANTA array
+#Check it's in $SANTA array
 puts $SANTAS
 
 #eat_milk_and_cookies
