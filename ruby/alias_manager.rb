@@ -1,3 +1,20 @@
+# Feedback from Bison:
+# There are three best practices I want you to keep in mind when you write pseudocode.
+
+#First, capitalize language-specific keywords (IF, ELSE, BREAK, etc).
+#Second, write your pseudocode line-by-line as you would write your actual code. Just make sure it’s in plain English (no symbols, code-specific terminology).
+#Finally, indent your pseudocode as you would your actual code. This means indenting code blocks, conditionals, and the like whenever written.
+
+#[[EXAMPLE]]
+# Pseudocode
+
+# create method to swap vowels
+# input: string
+# steps:
+  # create a cipher hash of vowels and their replacement
+  # replace the character with its value pair in the cipher
+# output: string
+
 #Psuedocode:
 # Swapping the first and last name.
 # Changing all of the vowels (a, e, i, o, or u) to the next vowel in 'aeiou', and all of the consonants (everything else besides the vowels) to the next consonant in the alphabet. So 'a' would become 'e', 'u' would become 'a', and 'd' would become 'f'.
@@ -30,17 +47,40 @@ def encrypt_name(str)
   return encrypted_name.join(" ")
 end
 
+# def next_letter(letter) #OLD
+#   #check if vowel or consonant
+#   vowels = ['a','e','i','o','u']
+#   if vowels.index(letter) != nil
+#     return next_vowel(letter)
+#   else
+#     return next_consonant(letter)
+#   end
+# end
+
 def next_letter(letter)
-  #check if vowel or consonant
-  vowels = ['a','e','i','o','u']
-  if vowels.index(letter) != nil
-    return next_vowel(letter)
+vowel_cipher = {'a' => 'e',  'e' => 'i', 'i' => 'o', 'o' => 'u', 'u' => 'a'}
+consonant_cipher = {'d' => 'f', 'h' => 'j', "n" => 'p', 't' => 'v', 'z' => 'b'}
+
+  #for vowels
+  if vowel_cipher.has_key?(letter)
+    return vowel_cipher[letter]
+  elsif consonant_cipher.has_key?(letter)
+    return consonant_cipher[letter]
   else
-    return next_consonant(letter)
+    return letter.next
   end
 end
 
 
+# In place of writing out the alphabet, consider using a cipher hash for vowels.
+# vowel_cipher = {'a' => 'e',  'e' => 'i', 'i' => 'o', 'o' => 'u', 'u' => 'a'}
+# From here, you can use the built-in has_key? method to test whether or not the letter is a vowel, and from there, use bracket notation to replace that vowel with the next in the sequence. If you need to, experiment with this in IRB to see how it works:
+
+# def next_vowel(letter)
+#    if cipher.has_key?(letter)
+#       letter = cipher[letter]
+#    end
+# end
 
 def next_vowel(letter)
   vowels = ['a','e','i','o','u']
@@ -51,13 +91,15 @@ def next_vowel(letter)
   end
 end
 
+#mistake 1: edgecase for 'z' returned 'a'
+#mistake 2: can have edgecases just for d,h,n,t as they are the only ones followed by vowels
 def next_consonant(letter)
   vowels = ['a','e','i','o','u']
   new_letter = letter.next
 
-  #edge case for z
+  #edge case for z -- old mistake: returned a, now returns b
   if letter == 'z'
-    return 'a'
+    return 'b'
   end
 
   if vowels.index(new_letter) != nil
@@ -65,6 +107,10 @@ def next_consonant(letter)
   end
   return new_letter
 end
+
+#Feedback: should rewrite all of this into a method
+##Don't have logic, loops, etc. in global scope
+##Have $names stores inside there, instead of as global variable
 
 #User Interface
 puts "Please enter a name to encrypt."
