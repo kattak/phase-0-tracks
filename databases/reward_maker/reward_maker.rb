@@ -23,7 +23,7 @@ db.execute(create_table_cmd)
 # db.execute("INSERT INTO rewards (color, points) VALUES ('yellow', 10)")
 
 # add multiple rewards
-def create_kitten(db, color, points)
+def create_reward(db, color, points)
   db.execute("INSERT INTO rewards (color, points) VALUES (?, ?)", [color, points])
 end
 
