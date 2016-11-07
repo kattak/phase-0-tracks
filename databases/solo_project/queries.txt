@@ -1,0 +1,51 @@
+Display the information in one table (either table is fine).
+sqlite> select * from children
+   ...> ;
+1|George|1984|1
+2|Charlotte|2008|1
+3|Savannah|1969|2
+
+Update an item that meets some condition (you can choose a condition that makes sense).
+sqlite> update children set name="Prince George" WHERE name="George";
+sqlite> select * from children
+   ...> ;
+1|Prince George|1984|1
+2|Charlotte|2008|1
+3|Savannah|1969|2
+
+Display the information in both tables using one query.
+sqlite> select * from children, fathers where children.father_id = fathers.id;
+1|Prince George|1984|1|1|William
+2|Charlotte|2008|1|1|William
+3|Savannah|1969|2|2|Peter
+
+
+Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+sqlite> select children.name, fathers.name from children, fathers where children.father_id = fathers.id;
+Prince George|William
+Charlotte|William
+Savannah|Peter
+
+Delete an item that meets some condition (you can choose a condition that makes sense).
+sqlite> select * from children
+   ...> ;
+1|Prince George|1984|1
+2|Charlotte|2008|1
+3|Savannah|1969|2
+sqlite> delete from children where name = "Charlotte";
+sqlite> select * from children;
+1|Prince George|1984|1
+3|Savannah|1969|2
+
+INNER JOIN/LEFT JOIN/RIGHT JOIN
+sqlite> select children.name from children inner join fathers on children.father_id = fathers.id
+   ...> ;
+Prince George
+Savannah
+
+sqlite> select children.name from children left join fathers on children.father_id = fathers.id;
+Prince George
+Savannah
+
+sqlite> select children.name from children right join fathers on children.father_id = fathers.id;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
