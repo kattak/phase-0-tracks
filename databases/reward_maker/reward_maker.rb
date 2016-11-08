@@ -28,7 +28,7 @@ def create_reward(db, color, points)
 end
 
 100.times do
-  create_reward(db, Faker::Name.color, 0)
+  create_reward(db, Faker::Color.color_name, Faker::Number.number(1))
 end
 
 # explore ORM by retrieving data
