@@ -87,4 +87,6 @@ end
 #$vampires[:kat] = Vampire.new("kat", 25, 191, "n", "n", ['mud'])
 #kat = $vampires[:kat]
 
+#Start here:
 start_questionnare
+
